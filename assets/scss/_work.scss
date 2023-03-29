@@ -92,6 +92,7 @@
 .modal#workModal {
   .modal-dialog {
       max-width: 863px;
+      transition: opacity 0.15s linear;
 
       .modal-content {
           background: $secondary;

@@ -1,36 +1,45 @@
 <template>
-<div id="my_work">
-  <div class="text-center">
-    <header class="has-bg">
-      <img src="@/assets/images/h1-bg.png" alt="h1 bg">
-      <h1>My Work</h1>
-    </header>
-  </div>
-  <div class="filters">
-    <button v-for="(item, i) in buttons" :key="i" @click="filter(item.value)" data-group="all" :class="{'active' : item.active}">
-      <h4>{{ item.text }}</h4>
-    </button>
-  </div>
-  <div class="container">
-    <div class="row work-items">
-      <div class="col-lg-4 item" v-for="(item, i) in works" :key="i" :data-groups="item.groups">
-        <div class="wrap">
-          <img :src="item.image" alt="work">
+  <div>
+    <div id="my_work" :class="{ 'active blur': show }">
+      <div class="text-center">
+        <header class="has-bg">
+          <img src="@/assets/images/h1-bg.png" alt="h1 bg">
+          <h1>My Work</h1>
+        </header>
+      </div>
+      <div class="filters">
+        <button v-for="(item, i) in buttons" :key="i" @click="filter(item.value)" data-group="all" :class="{'active' : item.active}">
+          <h4>{{ item.text }}</h4>
+        </button>
+      </div>
+      <div class="container">
+        <div class="row work-items">
+          <div class="col-lg-4 item" v-for="(item, i) in works" @click="viewItem(item)" :key="i" :data-groups="item.groups">
+            <div class="wrap">
+              <img :src="item.image" alt="work">
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <transition name="modal" appear>
+      <view-work-modal v-if="show" :show="show" :item="selectedItem" @close="closeModal()"></view-work-modal>
+    </transition>
   </div>
-</div>
 </template>
 
 <script setup>
 import Shuffle from 'shufflejs'
+import ViewWorkModal from "@/components/ViewWorkModal.vue";
 import workImage1 from '@/assets/images/works/work-1.png'
 import workImage2 from '@/assets/images/works/work-2.png'
 import workImage3 from '@/assets/images/works/work-3.png'
 import workImage4 from '@/assets/images/works/work-4.png'
 import workImage5 from '@/assets/images/works/work-5.png'
 import workImage6 from '@/assets/images/works/work-6.png'
+
+const show = ref(false)
+const selectedItem = ref({})
 
 const buttons = ref([
   {
@@ -121,7 +130,6 @@ const works = ref([
 ])
 
 const filter = (tab) => {
-  console.log(tab)
   let toActiveIndex = buttons.value.findIndex(item => item.value == tab)
   let toNotActiveIndex = buttons.value.findIndex(item => item.active == true)
 
@@ -129,6 +137,16 @@ const filter = (tab) => {
   buttons.value[toActiveIndex].active = true
 
   shuffleInstance.value.filter(buttons.value[toActiveIndex].value)
+}
+
+const viewItem = (item) => {
+  show.value = true
+  selectedItem.value = item
+}
+
+const closeModal = () => {
+  show.value = false
+  selectedItem.value = {}
 }
 
 onMounted(() => {
@@ -142,5 +160,14 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+.modal-enter-active,
+.modal-leave-active {
+  // transition: opacity .5s ease;
+  transition: opacity .15s linear;
+}
 
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
 </style>

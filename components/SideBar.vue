@@ -1,7 +1,7 @@
 <template>
-  <div id="sidebar">
-    <div class="toggle-sidebar">
-      <i class="las la-bars"></i>
+  <div id="sidebar" :class="{ 'open': open }">
+    <div @click="open = !open" class="toggle-sidebar">
+      <i class="las la-bars"></i> 
     </div>
     <div class="logo">
       <h2>PM</h2>
@@ -23,6 +23,7 @@
 <script setup>
   import { useRoute } from 'vue-router';
   const route = useRoute()
+  const open = ref(false)
   const links = ref([
     {
       path: '/',
