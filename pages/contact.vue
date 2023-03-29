@@ -1,0 +1,68 @@
+<template>
+<div id="contact_me" class="active">
+  <div class="text-center">
+    <header class="has-bg">
+      <img src="@/assets/images/h1-bg.png" alt="h1 bg">
+      <h1>Contact Me</h1>
+    </header>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 form">
+        <form>
+          <div class="form item">
+            <label>Name</label>
+            <input type="text" name="name">
+          </div>
+          <div class="form item">
+            <label>Email</label>
+            <input type="text" name="email">
+          </div>
+          <div class="form item">
+            <label>Subject</label>
+            <input type="text" name="subject">
+          </div>
+          <div class="form item">
+            <label>Message</label>
+            <textarea type="text" name="message"></textarea>
+          </div>
+          <div class="text-end">
+            <button type="submit" class="btn-custom-dark">Send message</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-6 info">
+        <div class="item">
+          <i class="las la-phone"></i>
+          <div class="text">
+            <span class="title">Phone Number:</span>
+            <a href="tel:+639283693160">+63 9283 693 160</a>
+          </div>
+        </div>
+        <div class="item">
+          <i class="lar la-envelope"></i>
+          <div class="text">
+            <span class="title">Email:</span>
+            <a href="mailto:pamarquita@gmail.com">pamarquita@gmail.com</a>
+          </div>
+        </div>
+        <div class="item">
+          <i class="las la-map-marker"></i>
+          <div class="text">
+            <span class="title">Location:</span>
+            <p>San Juan, Manila</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</template>
+
+<script setup>
+
+</script>
+
+<style lang="scss" scoped>
+
+</style>
