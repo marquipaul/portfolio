@@ -1,9 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   target: 'static',
-  // router: {
-  //   base: '/portfolio-nuxt/'
-  // },
   css: [
     'bootstrap/dist/css/bootstrap.min.css',
     '@/assets/scss/main.scss',
@@ -25,6 +22,7 @@ export default defineNuxtConfig({
   ],
 
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
+    baseURL: '/portfolio/'
   },
 })
