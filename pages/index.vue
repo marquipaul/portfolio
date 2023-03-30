@@ -14,7 +14,7 @@
                 I develop functional Front-End Web solutions in all sizes.
                 Using one of the most well maintained and popular JavaScript Framework to develop your dream application.
               </p>
-              <a class="btn-custom-blue" href="assets/files/CV.pdf" download>Download CV</a>
+              <a class="btn-custom-blue" :href="MyCV" download>Download CV</a>
               <div class="socials">
                 <ul>
                   <li>
@@ -54,8 +54,8 @@
   </div>
 </template>
 <script setup>
+import MyCV from '@/assets/files/CV.pdf'
 const { $typed } = useNuxtApp()
-
 onMounted(() => {
   setTimeout(() => {
     $typed('.field h2', ['Front-End web developer', 'Vue.js/Nuxt.js, Vuetify, Bootstrap', 'JavaScript, CSS, SCSS, HTML5'])
