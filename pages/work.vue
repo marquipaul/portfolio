@@ -155,7 +155,7 @@ onMounted(() => {
       itemSelector: '.item'
     });
     shuffleInstance.value.filter('all')
-  }, 500);
+  }, 1000);
 })
 </script>
 

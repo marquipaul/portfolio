@@ -9,7 +9,7 @@
     <nav>
       <ul>
         <li v-for="(item, i) in links" :key="i">
-          <nuxt-link :to="item.path" class="inner-link" :class="{ 'active': item.path == route.path }">
+          <nuxt-link @click="open = false" :to="item.path" class="inner-link" :class="{ 'active': item.path == route.path }">
             <i :class="'las ' + item.icon"></i>
             <span>{{ item.text }}</span>
           </nuxt-link>
