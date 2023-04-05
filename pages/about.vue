@@ -11,12 +11,11 @@
               <img src="@/assets/images/h1-bg.png" alt="h1 bg">
               <h1>About Me</h1>
             </header>
-            <h2>Front-End web developer</h2>
+            <h2>Front-End Web Developer</h2>
             <p>
-              I'm a web developer with +5 years experience. I work on projects as a 
-              Front-End and Back-End developer. as a Front-End developer, I'm Fluent in HTML, CSS, Bootstrap, SCSS, Javascript, jQuery, Vue.js, and as a Back-End 
-              developer, I'm fluent in PHP, WordPress, and Laravel. <br>
-              This is my motto: "Everyone can start, but only a few can finish"
+              I'm a Front-end Web Developer with 4 years experience. As a Front-End developer, I use Vue.js/Nuxt.js, Vuetify, HTML, CSS, Bootstrap, SCSS, and JavaScript to make the application functional and useful. <br>
+              
+              <!-- This is my motto: "If you got rejected, then you must turn it to a positive outcome" -->
             </p>
             <div class="items">
               <div class="container">
@@ -54,7 +53,7 @@
             </div>
             <div class="buttons">
               <a class="btn-custom-blue" href="@/assets/files/CV.pdf" download>Download CV</a>
-              <a class="btn-custom-dark inner-link" href="#contact_me">Message me</a>
+              <!-- <router-link class="btn-custom-dark inner-link" to="/contact">Message me</router-link> -->
             </div>
           </div>
         </div>
@@ -190,13 +189,13 @@
             </div>
           </div>
         </div>
-        <div class="certifications">
+        <!-- <div class="certifications">
           <header class="custom">
-            <h2>My Certificates</h2>
+            <h2>My Certificate(s)</h2>
           </header>
           <div class="items row justify-content-center">
             <div class="col-md-6 col-lg-4 mb-4 mb-lg-0 item">
-              <img src="@/assets/images/certifications/cert1.png" alt="certificate 1">
+              <img src="@/assets/images/certifications/cert1.jpg" alt="certificate 1">
             </div>
             <div class="col-md-6 col-lg-4 mb-4 mb-lg-0 item">
               <img src="@/assets/images/certifications/cert2.png" alt="certificate 2">
@@ -205,8 +204,17 @@
               <img src="@/assets/images/certifications/cert3.png" alt="certificate 3">
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     <!-- </section> -->
   </div>
 </template>
+<script setup>
+useHead({
+  titleTemplate: '%s | About me',
+  meta: [
+    { hid: 'og-title', property: 'og:title', content: 'Paul | About Me' },
+    { hid: 'og-image', property: 'og:image', content: 'https://marquipaul.github.io/portfolio/og-about.png' },
+  ],
+})
+</script>

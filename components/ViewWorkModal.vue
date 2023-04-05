@@ -16,22 +16,22 @@
               <div class="col-lg-5 right">
                 <div class="client mb-3">
                   <i class="las la-user-alt"></i>
-                  <span class="title">Client:</span>
+                  <span class="title">Client: </span>
                   <span class="value">{{ item.client }}</span>
                 </div>
                 <div class="completed mb-3">
                   <i class="las la-calendar-check"></i>
-                  <span class="title">Completed:</span>
+                  <span class="title">Completed: </span>
                   <span class="value">{{ item.completed }}</span>
                 </div>
                 <div class="skills">
                   <i class="las la-flask"></i>
-                  <span class="title">Skills:</span>
+                  <span class="title">Skills: </span>
                   <span class="value">{{ item.skills }}</span>
                 </div>
-                <div class="project-link">
+                <div v-if="item.projectLink" class="project-link">
                   <i class="las la-link"></i>
-                  <a href="">Project Link</a>
+                  <a :href="item.projectLink">Project Link</a>
                 </div>
               </div>
             </div>

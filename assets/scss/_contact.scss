@@ -7,6 +7,53 @@
   .container {
     margin-top: 123px;
     margin-bottom: 50px;
+    .contact {
+      display: flex;
+      justify-content: center;
+      .socials {
+        margin-top: 100px;
+        margin-bottom: 30px;
+  
+        ul {
+          display: flex;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          flex-wrap: wrap;
+  
+          li {
+            margin-right: 8px;
+            a {
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+              padding: 9px 11px;
+              transition: all 0.3s;
+  
+              i {
+                color: $grey;
+                font-size: 18px;
+                margin-right: 8px;
+                transition: all 0.3s;
+              }
+              // span {
+              //   color: $secondary_grey;
+              //   transition: all 0.3s;
+              // }
+              &:hover {
+                background: $secondary;
+                border-radius: 6px;
+                
+                span,
+                i {
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 
     .form {
       padding-right: 69px;

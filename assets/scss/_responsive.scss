@@ -120,9 +120,10 @@
       padding-top: 80px;
       .socials {
         margin-top: 70px;
+        
 
         ul {
-          justify-content: space-between;
+          flex-direction: column;
         }
       }
     }

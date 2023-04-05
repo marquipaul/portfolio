@@ -23,6 +23,18 @@ export default defineNuxtConfig({
 
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
-    baseURL: '/portfolio/'
+    baseURL: '/portfolio/',
+    head: {
+      title: 'Paul M',
+      meta: [
+        { name: 'description', content: "Hi, I'm Paul Marquita, I develop functional Front-End Web solutions in all sizes. Using one of the most well maintained and popular JavaScript Framework to develop your dream application. Tech Stacks: Vue.js/Nuxt.js, Vuetify, Bootstrap, JavaScript, CSS, SCSS, HTML5" },
+        // { hid: 'og-title', property: 'og:title', content: 'Paul | Portfolio' },
+        { hid: 'og-desc', property: 'og:description', content: "Hi, I'm Paul Marquita, I develop functional Front-End Web solutions in all sizes. Using one of the most well maintained and popular JavaScript Framework to develop your dream application. Tech Stacks: Vue.js/Nuxt.js, Vuetify, Bootstrap, JavaScript, CSS, SCSS, HTML5" },
+        // { hid: 'og-image', property: 'og:image', content: 'https://marquipaul.github.io/portfolio/og-image.png' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: 'https://marquipaul.github.io/portfolio/favicon.ico' }
+      ]
+    },
   },
 })

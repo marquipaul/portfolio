@@ -50,11 +50,11 @@
       text: 'Testimonial',
       icon : 'la-comment-alt'
     },
-    {
-      path: '/contact',
-      text: 'Contact Me',
-      icon : 'la-phone'
-    }
+    // {
+    //   path: '/contact',
+    //   text: 'Contact Me',
+    //   icon : 'la-phone'
+    // }
   ])
 </script>
 

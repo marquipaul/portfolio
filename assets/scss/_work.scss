@@ -25,67 +25,71 @@
       }
   }
 
-  .work-items {
-      .item {
-          margin-bottom: 24px;
-
-          .wrap {
-              position: relative;
-              overflow: hidden;
-
-              &:hover {
+  .container {
+    margin-top: 100px;
+    .work-items {
+        justify-content: center;
+          .item {
+              margin-bottom: 24px;
+    
+              .wrap {
+                  position: relative;
+                  overflow: hidden;
+    
+                  &:hover {
+                      &:before {
+                          transform: rotate(0deg);
+                      }
+    
+                      &:after {
+                          transform: translate(-50%, -50%) rotate(0deg);
+                      }
+                  }
+    
                   &:before {
-                      transform: rotate(0deg);
+                      content: "";
+                      position: absolute;
+                      width: 100%;
+                      height: 100%;
+                      background: rgba($primary, 0.6);
+                      border-radius: 8px;
+                      z-index: 1;
+                      cursor: pointer;
+                      transform: rotate(-100deg);
+                      transform-origin: top left;
+                      transition: all 0.3s;
                   }
-
+    
                   &:after {
-                      transform: translate(-50%, -50%) rotate(0deg);
+                      content: "View";
+                      position: absolute;
+                      width: 96%;
+                      height: 95%;
+                      background: rgba($dark_bg, 0.8);
+                      border-radius: 8px;
+                      transform-origin: bottom left;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%) rotate(100deg);
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-size: 24px;
+                      letter-spacing: 3px;
+                      z-index: 2;
+                      cursor: pointer;
+                      transition: all 0.3s;
                   }
-              }
-
-              &:before {
-                  content: "";
-                  position: absolute;
-                  width: 100%;
-                  height: 100%;
-                  background: rgba($primary, 0.6);
-                  border-radius: 8px;
-                  z-index: 1;
-                  cursor: pointer;
-                  transform: rotate(-100deg);
-                  transform-origin: top left;
-                  transition: all 0.3s;
-              }
-
-              &:after {
-                  content: "View";
-                  position: absolute;
-                  width: 96%;
-                  height: 95%;
-                  background: rgba($dark_bg, 0.8);
-                  border-radius: 8px;
-                  transform-origin: bottom left;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%) rotate(100deg);
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  font-size: 24px;
-                  letter-spacing: 3px;
-                  z-index: 2;
-                  cursor: pointer;
-                  transition: all 0.3s;
-              }
-
-              img {
-                  width: 100%;
-                  opacity: 0.5;
-                  border-radius: 8px;
-                  cursor: pointer;
+    
+                  img {
+                      width: 100%;
+                      opacity: 0.5;
+                      border-radius: 8px;
+                      cursor: pointer;
+                  }
               }
           }
-      }
+        }
   }
 }
 

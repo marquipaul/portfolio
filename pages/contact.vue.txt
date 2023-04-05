@@ -8,7 +8,31 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 form">
+      <div class="col-lg-12 contact">
+        <div class="socials">
+          <ul>
+            <li>
+              <a class="btn-custom-blue" href="https://www.linkedin.com/in/paul-adrian-marquita-69151810a/">
+                <i class="lab la-linkedin-in"></i> 
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a class="btn-custom-blue" href="https://github.com/marquipaul">
+                <i class="lab la-github"></i>
+                <span>@marquipaul</span>
+              </a>
+            </li>
+            <li>
+              <a class="btn-custom-blue" href="mailto:pamarquita@gmail.com">
+                <i class="las la-envelope"></i>
+                <span>pamarquita@gmail.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div class="col-lg-6 form">
         <form>
           <div class="form item">
             <label>Name</label>
@@ -53,7 +77,8 @@
             <p>San Juan, Manila</p>
           </div>
         </div>
-      </div>
+      </div> -->
+      
     </div>
   </div>
 </div>

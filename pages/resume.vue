@@ -18,9 +18,19 @@
               <i class="las la-university"></i>
             </div>
             <div class="box">
-              <span class="year">2014 - 2018</span>
-              <h2 class="title">Engineer's degree</h2>
-              <p>Bmet minim mollit deserunt llamco est sit aliqua</p>
+              <span class="year">2017-2020</span>
+              <h2 class="title">BS Information Technology</h2>
+              <p>Technological Institute of the Philippines</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="icon">
+              <i class="las la-university"></i>
+            </div>
+            <div class="box">
+              <span class="year">2014-2016</span>
+              <h2 class="title">Associate in Computer Tech</h2>
+              <p>Technological Institute of the Philippines</p>
             </div>
           </div>
           <div class="item">
@@ -30,17 +40,7 @@
             <div class="box">
               <span class="year">2010 - 2014</span>
               <h2 class="title">High School</h2>
-              <p>Bmet minim mollit deserunt llamco est sit aliqua</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="icon">
-              <i class="las la-university"></i>
-            </div>
-            <div class="box">
-              <span class="year">2001 - 2010</span>
-              <h2 class="title">Elementary School</h2>
-              <p>Bmet minim mollit deserunt llamco est sit aliqua</p>
+              <p>Mount Carmel School of Polillo</p>
             </div>
           </div>
         </div>
@@ -56,9 +56,9 @@
                 <i class="las la-briefcase"></i>
               </div>
               <div class="box">
-                <span class="year">2020 - Present</span>
-                <h2 class="title">Senior Web Developer</h2>
-                <p>Bmet minim mollit deserunt llamco est sit aliqua</p>
+                <span class="year">AUGUST 2022 – MARCH 2023</span>
+                <h2 class="title">Front-End Web Developer</h2>
+                <p>Putti Apps</p>
               </div>
             </div>
             <div class="item">
@@ -66,9 +66,9 @@
                 <i class="las la-briefcase"></i>
               </div>
               <div class="box">
-                <span class="year">2019 - 2020</span>
-                <h2 class="title">Mid-Level Web Developer</h2>
-                <p>Bmet minim mollit deserunt llamco est sit aliqua</p>
+                <span class="year">MAY 2020 – AUGUST 2022</span>
+                <h2 class="title">Front-End Web Developer</h2>
+                <p>Yondu Inc.</p>
               </div>
             </div>
             <div class="item">
@@ -76,9 +76,9 @@
                 <i class="las la-briefcase"></i>
               </div>
               <div class="box">
-                <span class="year">2017 - 2019</span>
-                <h2 class="title">Junior Web Developer</h2>
-                <p>Bmet minim mollit deserunt llamco est sit aliqua</p>
+                <span class="year">JULY 2019 – May 2020</span>
+                <h2 class="title">Front-End Web Developer</h2>
+                <p>Fourello Inc.</p>
               </div>
             </div>
           </div>
@@ -90,7 +90,9 @@
 </template>
 
 <script setup>
-
+useHead({
+  titleTemplate: '%s | My Resume',
+})
 </script>
 
 <style lang="scss" scoped>

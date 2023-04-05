@@ -36,6 +36,10 @@ import personImage3 from '@/assets/images/testimonials/person-3.png'
 import personImage4 from '@/assets/images/testimonials/person-4.png'
 import personImage5 from '@/assets/images/testimonials/person-5.png'
 
+useHead({
+  titleTemplate: '%s | Testimonials',
+})
+
 const active = ref(3)
 const users = ref([
   {
