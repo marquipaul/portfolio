@@ -45,11 +45,11 @@
       text: 'My Work',
       icon : 'la-briefcase'
     },
-    {
-      path: '/testimonial',
-      text: 'Testimonial',
-      icon : 'la-comment-alt'
-    },
+    // {
+    //   path: '/testimonial',
+    //   text: 'Testimonial',
+    //   icon : 'la-comment-alt'
+    // },
     // {
     //   path: '/contact',
     //   text: 'Contact Me',

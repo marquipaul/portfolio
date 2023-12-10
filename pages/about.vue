@@ -13,7 +13,7 @@
             </header>
             <h2>Front-End Web Developer</h2>
             <p>
-              I'm a Front-end Web Developer with 4 years experience. As a Front-End developer, I use Vue.js/Nuxt.js, Vuetify, HTML, CSS, Bootstrap, SCSS, and JavaScript to make the application functional and useful. <br>
+              I'm a Front-end Web Developer with {{ getYear('2019-07-01') }} years experience. As a Front-End developer, I use Vue.js/Nuxt.js, Vuetify, HTML, CSS, Bootstrap, SCSS, and JavaScript to make the application functional and useful. <br>
               
               <!-- This is my motto: "If you got rejected, then you must turn it to a positive outcome" -->
             </p>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="item">
                       <span class="title">Age:</span>
-                      <span class="value">25</span>
+                      <span class="value">{{ getYear('1997-12-22') }}</span>
                     </div>
                     <div class="item">
                       <span class="title">Location:</span>
@@ -37,7 +37,7 @@
                   <div class="col-lg-6 ps-0">
                     <div class="item">
                       <span class="title">Years of experience:</span>
-                      <span class="value">4 Years</span>
+                      <span class="value">{{ getYear('2019-07-01') }} Years</span>
                     </div>
                     <div class="item">
                       <span class="title">Phone:</span>
@@ -217,4 +217,10 @@ useHead({
     { hid: 'og-image', property: 'og:image', content: 'https://marquipaul.github.io/portfolio/og-about.png' },
   ],
 })
+
+const getYear = (date) => {
+  let ageDifMs = Date.now() - new Date(date);
+  let ageDate = new Date(ageDifMs); // miliseconds from epoch
+  return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
 </script>

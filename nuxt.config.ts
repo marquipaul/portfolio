@@ -23,7 +23,7 @@ export default defineNuxtConfig({
 
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
-    baseURL: '/portfolio/',
+    // baseURL: '/portfolio/',
     head: {
       title: 'Paul M',
       meta: [
