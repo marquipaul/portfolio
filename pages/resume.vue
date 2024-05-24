@@ -56,6 +56,16 @@
                 <i class="las la-briefcase"></i>
               </div>
               <div class="box">
+                <span class="year">APRIL 2023 – PRESENT</span>
+                <h2 class="title">Front-End Web Developer</h2>
+                <p>AB Leasure Exponent Inc.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="icon">
+                <i class="las la-briefcase"></i>
+              </div>
+              <div class="box">
                 <span class="year">AUGUST 2022 – MARCH 2023</span>
                 <h2 class="title">Front-End Web Developer</h2>
                 <p>Putti Apps</p>
